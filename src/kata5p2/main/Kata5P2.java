@@ -7,7 +7,7 @@ import java.util.List;
 import javax.swing.JOptionPane;
 import kata5p2.model.Mail;
 import kata5p2.view.MailHistogramBuilder;
-import kata5p2.view.MailListReader;
+import kata5p2.view.MailListReaderDB;
 
 public class Kata5P2 {
     private String fileName;
@@ -30,7 +30,7 @@ public class Kata5P2 {
     
     
     private void process() throws Exception {
-        List<Mail> emails = MailListReader.read(fileName);
+        List<Mail> emails = MailListReaderDB.read(fileName);
         histogram = MailHistogramBuilder.build(emails);
     }
 
